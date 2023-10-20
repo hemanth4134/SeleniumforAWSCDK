@@ -1,0 +1,16 @@
+masters\GBCS_ProjectMaster.class
+masters\GBCS_ChecklistMaster.class
+masters\DesignReviewTracker.class
+masters\CreateEquipment_Project.class
+masters\LoginPage.class
+masters\TDDTestScreenshot.class
+masters\GBCS_Checklist_Projectchecklist.class
+masters\GBCS_ServiceMaster.class
+masters\GBCS_CompanyDivMaster.class
+masters\GBCS_SOR.class
+masters\GBCS_UserMaster.class
+masters\RoleMaster.class
+masters\User_Master.class
+masters\Calculate_ProductTotal.class
+masters\GBCS_LocationMaster.class
+masters\GBCSTestScreenshots.class

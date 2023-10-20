@@ -1,0 +1,118 @@
+version: 0.2
+
+# env:
+#   variables:
+#     ARTIFACT_URL: "https://kogdakyus6.execute-api.ap-south-1.amazonaws.com/dev/designrelease/{proxy+}"
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+    commands:
+      - echo Installing Maven
+      - curl -LO https://downloads.apache.org/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+      - export M2_HOME=$PWD/apache-maven-3.8.1
+      - export M2=$M2_HOME/bin
+      - export PATH=$M2:$PATH
+      - mvn -version
+  pre_build:
+    commands:
+      - echo Pre-build phase
+    #   - wget $https://kogdakyus6.execute-api.ap-south-1.amazonaws.com/dev/designrelease/{proxy+} -O my-artifact.zip
+    #   - unzip -q my-artifact.zip -d my-artifact
+      # Add your pre-build commands here
+  build:
+    commands:
+      - echo Build phase
+      - echo Compiling and running Maven tests
+    #   - cd my-artifact
+    #   - mvn clean test
+      - mvn clean
+      - mvn clean test
+    #   - cd 
+    #   - chmod +x chromedriver
+    #   - cd ./chromedriver
+    #   - ls
+    #   - aws s3 cp NewReport.html s3://selenium.test.reports/
+    #   - aws s3 cp s3://selenium.test.reports/NewReport.html s3://selenium.test.reports/report-$(date +%Y-%m-%d-%T).html
+      # Add your build commands here
+  post_build:
+    commands:
+      - echo Post-build phase
+      # Add your post-build commands here
+
+artifacts:
+  files:
+    - '**/*'
+
+
+# version: 0.2
+ 
+# phases:
+#   install:
+#     commands:
+#       # - sudo apt-get update -y
+#         - sudo apt install default-jdk -y
+#         - PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-11-openjdk-amd64/bin"
+#         - JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+#         - sudo apt-get install 
+#   - cd /opt
+#   - curl -LO https://apache.mirror.digionline.de/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+#   - tar -xf apache-maven-3.8.1-bin.tar.gz
+#   - wget https://dlcdn.apache.org/maven/maven-3/3.9.5/binaries/apache-maven-3.9.5-bin.tar.gz
+#   - wget https://dlcdn.apache.org/maven/maven-3/3.9.5/source/apache-maven-3.9.5-src.tar.gz
+#   - wget http://ftp.meisei-u.ac.jp/mirror/apache/dist/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+#   - wget https://apache.mirror.netcologne.de/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+#   - tar -xvzf apache-maven-3.8.1.zip
+#   - echo Unzipping apache-maven-3.8.1.zip
+#   - unzip apache-maven-3.8.1.zip
+# #   - mv apache-maven-3.8.1 maven
+#   - cd apache-maven-3.8.1/bin
+#   - pwd
+#   - cd ../
+#   - pwd
+#   - cd ~
+#   - pwd
+#   - wget -y http://mirrors.estointernet.in/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+#   - tar -xzf  apache-maven-3.8.1-bin.tar.gz
+#   - mkdir /opt/maven
+#   - mv apache-maven-3.8.1 /opt/maven
+#   - ls /opt/maven/
+#   - apt-get install -y maven
+#   - wget https://mirrors.estointernet.in/apache/maven/maven-3/3.8.1/binaries/apache-maven-3.8.1-bin.tar.gz
+        
+#   pre_build:
+#     commands:
+#       - java -version
+#       - mvn -version 
+      # - command
+#   build:
+#     commands:
+#       - echo Entered the build phase...
+#       - echo Build started on `date`
+#       - mvn package -Dmaven.test.failure.ignore=true
+#       # - command
+#     finally:
+#       - echo This always runs even if the install command fails
+  #post_build:
+    #commands:
+      # - command
+      # - command
+#reports:
+  #report-name-or-arn:
+    #files:
+      # - location
+      # - location
+    #base-directory: location
+    #discard-paths: yes
+    #file-format: JunitXml | CucumberJson
+#artifacts:
+  #files:
+    # - location
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths

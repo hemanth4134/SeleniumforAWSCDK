@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" >
+ <!--  <test name="SERVICE MASTER">
+    <classes>
+      <class name="masters.GBCS_ServiceMaster"/>
+      <class name="masters.GBCS_CompanyDivMaster"/>
+      <class name="masters.GBCS_LocationMaster"/>
+      <class name="masters.RoleMaster"/>
+    </classes>
+  </test> --> <!-- Test -->
+  <test name="COMPANY ">
+    <classes>
+     
+      <class name="masters.RoleMaster"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

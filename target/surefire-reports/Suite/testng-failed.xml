@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test name="COMPANY (failed)">
+    <classes>
+      <class name="masters.Calculate_ProductTotal">
+        <methods>
+          <include name="login"/>
+          <include name="setOutputDirectory"/>
+        </methods>
+      </class> <!-- masters.Calculate_ProductTotal -->
+    </classes>
+  </test> <!-- COMPANY (failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test parallel="tests" name="SERVICE MASTER(failed)">
+    <classes>
+      <class name="masters.GBCS_CompanyDivMaster">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- masters.GBCS_CompanyDivMaster -->
+      <class name="masters.GBCS_ServiceMaster">
+        <methods>
+          <include name="sorting"/>
+          <include name="Searchbystatus"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- masters.GBCS_ServiceMaster -->
+    </classes>
+  </test> <!-- SERVICE MASTER(failed) -->
+</suite> <!-- Failed suite [Suite] -->

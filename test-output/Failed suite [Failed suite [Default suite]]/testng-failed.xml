@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Default suite]]]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)(failed)(failed)">
+    <classes>
+      <class name="masters.GBCS_CompanyDivMaster">
+        <methods>
+          <include name="viewcompnay_excel"/>
+          <include name="beforeTest"/>
+          <include name="addCompanyDiv" invocation-numbers="7 8"/>
+          <include name="updatecompany"/>
+          <include name="SortBycols"/>
+          <include name="deletecompany" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- masters.GBCS_CompanyDivMaster -->
+    </classes>
+  </test> <!-- Default test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Default suite]]] -->
